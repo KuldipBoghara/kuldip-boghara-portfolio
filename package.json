@@ -1,0 +1,32 @@
+{
+  "name": "kuldip-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.3.8",
+    "gsap": "^3.12.5",
+    "@gsap/react": "^2.1.1",
+    "@react-three/fiber": "^8.17.5",
+    "@react-three/drei": "^9.108.3",
+    "three": "^0.167.1",
+    "@emailjs/browser": "^4.4.1",
+    "react-hook-form": "^7.52.1",
+    "react-intersection-observer": "^9.13.1",
+    "lottie-react": "^2.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0",
+    "tailwindcss": "^3.4.7",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40"
+  }
+}
