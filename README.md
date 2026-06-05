@@ -2,7 +2,7 @@
 
 A state-of-the-art, premium portfolio website built to showcase my expertise as a **MERN Stack & AI Developer**. The portfolio is designed with custom glassmorphism interfaces, interactive 3D particle fields, responsive grid timelines, and high-performance scroll-driven animations.
 
-🔗 **Live Portfolio:** [bogharakuldip.com](https://bogharakuldip.com) (or your hosting link)
+🔗 **Live Portfolio:** [bogharakuldip.com](https://kuldip-boghara-portfolio.vercel.app/)
 💼 **LinkedIn:** [Kuldip Boghara](https://www.linkedin.com/in/kuldip-boghara/)
 🐙 **GitHub:** [KuldipBoghara](https://github.com/KuldipBoghara)
 📧 **Email:** [bogharakuldip@gmail.com](mailto:bogharakuldip@gmail.com)
