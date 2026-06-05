@@ -151,6 +151,7 @@ export default function Experience() {
         {/* ── Timeline grid ─────────────────────────────────────────── */}
         <div
           ref={timelineRef}
+          className="timeline-grid-container"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 48px 1fr',
@@ -163,6 +164,7 @@ export default function Experience() {
           {/* ── Scrolling vertical bar (center column) ── */}
           {/* Track (grey base) */}
           <div
+            className="timeline-track"
             style={{
               gridColumn: '2 / 3',
               gridRow: `1 / ${experiences.length + 2}`,
@@ -218,7 +220,7 @@ export default function Experience() {
                 }}
               >
                 {/* Left cell */}
-                <div style={{ gridColumn: '1 / 2', gridRow: rowNumber, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
+                <div className="timeline-left-cell" style={{ gridColumn: '1 / 2', gridRow: rowNumber, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
                   {isLeft && (
                     <div style={{ width: '100%', paddingRight: '2rem' }}>
                       <TimelineCard exp={exp} side="left" index={i} inView={inView} />
@@ -227,7 +229,7 @@ export default function Experience() {
                 </div>
 
                 {/* Center dot */}
-                <div style={{ gridColumn: '2 / 3', gridRow: rowNumber, display: 'flex', justifyContent: 'center', paddingTop: '1.5rem', position: 'relative', zIndex: 10 }}>
+                <div className="timeline-center-cell" style={{ gridColumn: '2 / 3', gridRow: rowNumber, display: 'flex', justifyContent: 'center', paddingTop: '1.5rem', position: 'relative', zIndex: 10 }}>
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={inView ? { scale: 1 } : {}}
@@ -245,7 +247,7 @@ export default function Experience() {
                 </div>
 
                 {/* Right cell */}
-                <div style={{ gridColumn: '3 / 4', gridRow: rowNumber, display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                <div className="timeline-right-cell" style={{ gridColumn: '3 / 4', gridRow: rowNumber, display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
                   {!isLeft && (
                     <div style={{ width: '100%', paddingLeft: '2rem' }}>
                       <TimelineCard exp={exp} side="right" index={i} inView={inView} />
@@ -258,10 +260,10 @@ export default function Experience() {
 
           {/* ── Education row ── */}
           {/* Left: empty */}
-          <div style={{ gridColumn: '1 / 2', gridRow: experiences.length + 1 }} />
+          <div className="timeline-left-cell" style={{ gridColumn: '1 / 2', gridRow: experiences.length + 1 }} />
 
           {/* Center dot */}
-          <div style={{ gridColumn: '2 / 3', gridRow: experiences.length + 1, display: 'flex', justifyContent: 'center', paddingTop: '1.5rem', position: 'relative', zIndex: 10 }}>
+          <div className="timeline-center-cell" style={{ gridColumn: '2 / 3', gridRow: experiences.length + 1, display: 'flex', justifyContent: 'center', paddingTop: '1.5rem', position: 'relative', zIndex: 10 }}>
             <motion.div
               initial={{ scale: 0 }}
               animate={inView ? { scale: 1 } : {}}
@@ -279,7 +281,7 @@ export default function Experience() {
           </div>
 
           {/* Right: education card */}
-          <div style={{ gridColumn: '3 / 4', gridRow: experiences.length + 1, paddingLeft: '2rem' }}>
+          <div className="timeline-right-cell" style={{ gridColumn: '3 / 4', gridRow: experiences.length + 1, paddingLeft: '2rem' }}>
             <motion.div
               className="timeline-card"
               initial={{ opacity: 0, x: 50 }}
@@ -296,27 +298,6 @@ export default function Experience() {
             </motion.div>
           </div>
         </div>
-
-        {/* Mobile fallback — simple vertical stack */}
-        <style>{`
-          @media (max-width: 768px) {
-            #experience [style*="grid-template-columns"] {
-              display: flex !important;
-              flex-direction: column !important;
-              padding-left: 2.5rem;
-              position: relative;
-            }
-            #experience [style*="grid-template-columns"]::before {
-              content: '';
-              position: absolute;
-              left: 8px;
-              top: 0; bottom: 0;
-              width: 2px;
-              background: linear-gradient(to bottom, #00F5FF, #7C3AED, #FF6B2B);
-              border-radius: 2px;
-            }
-          }
-        `}</style>
       </div>
     </section>
   );

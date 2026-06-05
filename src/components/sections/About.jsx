@@ -168,7 +168,7 @@ export default function About() {
               </motion.div>
 
               {/* Stats */}
-              <motion.div variants={itemVariants} className="grid grid-cols-4 gap-3">
+              <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {stats.map((s, i) => (
                   <div key={i} className="stat-card">
                     <CountUp to={s.value} suffix={s.suffix} delay={i * 100} />

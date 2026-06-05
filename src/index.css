@@ -1265,3 +1265,86 @@ body::before {
   border-radius: 50%;
   animation: blink 1.5s ease-in-out infinite;
 }
+
+/* ============================================================
+   RESPONSIVE TIMELINE GRID
+   ============================================================ */
+.timeline-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  row-gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-track {
+  grid-column: 2 / 3;
+  width: 2px;
+  justify-self: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  position: relative;
+  overflow: visible;
+}
+
+.timeline-left-cell {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.timeline-center-cell {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline-right-cell {
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Tablet & Mobile responsive override (screens <= 768px) */
+@media (max-width: 768px) {
+  .timeline-grid-container {
+    grid-template-columns: 32px 1fr !important;
+    row-gap: 2rem !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .timeline-track {
+    grid-column: 1 / 2 !important;
+    justify-self: flex-start !important;
+    margin-left: 15px !important; /* (32px - 2px) / 2 = 15px to center the track line */
+  }
+
+  .timeline-left-cell,
+  .timeline-right-cell {
+    grid-column: 2 / 3 !important;
+    justify-content: flex-start !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline-left-cell > div,
+  .timeline-right-cell > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .timeline-center-cell {
+    grid-column: 1 / 2 !important;
+    justify-self: flex-start !important;
+    margin-left: 8px !important; /* (32px - 16px) / 2 = 8px to center the 16px dot */
+    padding-top: 1.5rem !important;
+  }
+}
