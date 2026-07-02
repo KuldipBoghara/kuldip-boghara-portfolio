@@ -33,7 +33,7 @@ const contactInfo = [
 ];
 
 const socials = [
-  { icon: "⌂", label: "GitHub", href: "https://github.com/KuldipBoghara" },
+  { icon: "🐙", label: "GitHub", href: "https://github.com/KuldipBoghara" },
   {
     icon: "💼",
     label: "LinkedIn",
