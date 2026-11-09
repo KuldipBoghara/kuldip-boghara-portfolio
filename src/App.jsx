@@ -59,7 +59,7 @@ function Hero() {
           I build business websites and the <em>admin panels</em> that run them.
         </h1>
         <p className="lead">
-          I'm a full-stack developer with three-plus years of React, Node.js and MongoDB, first with teams in
+          I'm a full-stack developer with four-plus years of React, Node.js and MongoDB, first with teams in
           Toronto and now at a product agency in Ahmedabad. Most of my work is the part customers never see:
           dashboards, CMSs, role-based access, build pipelines, secure APIs. I also build the public website
           that sits in front of all that.
